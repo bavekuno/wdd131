@@ -63,7 +63,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: var(--blue);
+  color: yellowgreen;
 }
 
 nav a:hover::after {
