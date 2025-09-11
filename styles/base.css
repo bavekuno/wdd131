@@ -86,6 +86,8 @@ nav a:hover::after {
   gap: 18px;
 }
 
+
+
 .card {
   background: #fff;
   border: 1px solid #cbd5e1;
@@ -103,6 +105,7 @@ nav a:hover::after {
   font-weight: 700;
   text-align: center;
   margin: -18px -18px 16px -18px;
+  font-size:18px;
 }
 
 .about-layout {
