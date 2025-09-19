@@ -1,0 +1,44 @@
+.nav-list.show-menu {
+    display: flex;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .hamburger-button {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+
+    }
+}
+
+
+/*for a Larger View*/
+@media (min-width: 740px) {
+    header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    nav a {
+        flex: 1 1 100%;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    main figure {
+        width: 100%;
+        max-width: 300px;
+    }
+}
