@@ -130,7 +130,7 @@ footer .year {
 /*for a Larger View*/
 @media (min-width: 740px) {
     header {
-        display: center;
+        
         align-items: center;
         justify-content: center;
     }
