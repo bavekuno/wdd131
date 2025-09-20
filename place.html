@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This dives into Uganda's geography, weather, and weather conditions.">
+    <meta name="author" content="Bavekuno Brian">
+    <title>Uganda Page</title>
+
+    <script src="scripts/country.js" defer></script>
+    <link rel="stylesheet" href="styles/country.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Uganda</h1>
+
+        </svg>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/place.webp" srcset="images/place-small.webp 480w, images/place.webp 800w"
+                sizes="(max-width: 600px) 480px, 800px" alt="Uganda landscape">
+
+
+            <div class="data-box">
+                <div class="title-bar">Data </div>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Kampala</li>
+                    <li><strong>Languages:</strong> English, Luganda, Swahili</li>
+                    <li><strong>Time Zone:</strong> EAT (East Africa Time)</li>
+                    <li><strong>Currency:</strong> Uganda Shillings</li>
+                    <li><strong>Calling Code:</strong> +256</li>
+                    <li><strong>Internet TLD:</strong> .ug</li>
+                </ul>
+            </div>
+
+
+            <div class="weather-box">
+                <div class="title-bar">Weather</div>
+                <div class="weather_icon">
+                    <img src="images/cloud_sky_summer_sun_sunshine_icon.svg"
+                        srcset="images/cloud_sky_summer_sun_sunshine_icon.svg 4w, images/cloud_sky_summer_sun_sunshine_icon.svg 8w"
+                        sizes="(max-width: 6px) 4px, 8px" alt="Weather Icon">
+                </div>
+
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp"> 10°C</span></li>
+                    <li><strong>Condition:</strong> Partly Sunny</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill"> 9.8°C</span></li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌴 Bavekuno Brian 🌴 Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

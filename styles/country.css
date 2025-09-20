@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 22px;
+    background-color: #fff;
+}
+
+main {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+header {
+    background-color: #00a6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+
+header,
+main {
+    margin: 0 auto;
+
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero img {
+    width: 180%;
+    height: auto;
+    display: block;
+}
+
+.data-box,
+.weather-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 0rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.data-box {
+    top: 8%;
+    left: -20%
+}
+
+.weather-box {
+    bottom: 5%;
+    right: -20%;
+}
+
+.title-bar {
+    background-color: green;
+    color: var(--white);
+    padding: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+
+/* New style for weather icon */
+.title-bar .weather-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+/* Flexbox for title and icon on desktop */
+.weather-box .title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 14px;
+    background: #00a6fb;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    font-size: 2rem;
+}
+
+footer .year {
+    color: #ffd1e4;
+    margin-right: 6px;
+}
+
+/*for a Larger View*/
+@media (min-width: 740px) {
+    header {
+        display: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        display: block;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 739px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    .data-box,
+    .weather-box {
+        position: static;
+        width: 180%;
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        left: auto;
+        right: auto;
+    }
+
+    .data-box {
+        top: auto;
+    }
+
+    .weather-box {
+        bottom: auto;
+    }
+
+    /* Mobile specific style for weather icon and title */
+    .weather-box .title-bar {
+        flex-direction: column;
+    }
+
+    .title-bar .weather-icon {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-left: 0;
+    }
+}
