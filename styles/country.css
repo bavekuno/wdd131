@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #00a6fb;
+    --white: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 
 body {
     font-size: 22px;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 main {
@@ -19,7 +24,7 @@ main {
 }
 
 header {
-    background-color: #00a6fb;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,15 +37,13 @@ header {
 header,
 main {
     margin: 0 auto;
-
 }
 
 h1 {
     font-size: 4rem;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     justify-content: center;
-
 }
 
 .hero {
@@ -68,7 +71,7 @@ h1 {
 
 .data-box {
     top: 8%;
-    left: -20%
+    left: -20%;
 }
 
 .weather-box {
@@ -84,21 +87,23 @@ h1 {
     margin-bottom: 0.5rem;
     text-align: center;
     border-radius: 0.3rem;
-}
-
-/* New style for weather icon */
-.title-bar .weather-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: middle;
-    margin-left: 0.5rem;
-}
-
-/* Flexbox for title and icon on desktop */
-.weather-box .title-bar {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+.weather-box .title-bar::after {
+    content: "⛅";
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 739px) {
+    .weather-box .title-bar::after {
+        content: none;
+    }
 }
 
 ul {
@@ -111,11 +116,23 @@ li {
     margin-bottom: 0.3rem;
 }
 
-/* Footer styling */
+.weather_icon {
+    display: none;
+}
+
+@media (max-width: 739px) {
+    .weather_icon {
+        display: block;
+        max-width: 30px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
 footer {
     margin-top: 14px;
-    background: #00a6fb;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--white);
     text-align: center;
     padding: 12px 0;
     font-size: 14px;
@@ -127,10 +144,8 @@ footer .year {
     margin-right: 6px;
 }
 
-/*for a Larger View*/
 @media (min-width: 740px) {
     header {
-        
         align-items: center;
         justify-content: center;
     }
@@ -138,9 +153,15 @@ footer .year {
     main {
         display: block;
     }
+
+    .weather-box h2::after {
+        content: "⛅";
+        margin-left: 10px;
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
 }
 
-/* Mobile View */
 @media (max-width: 739px) {
     .hero {
         flex-direction: column;
@@ -167,14 +188,7 @@ footer .year {
         bottom: auto;
     }
 
-    /* Mobile specific style for weather icon and title */
-    .weather-box .title-bar {
-        flex-direction: column;
-    }
-
-    .title-bar .weather-icon {
-        width: 0.5rem;
-        height: 0.5rem;
-        margin-left: 0;
+    .title-bar::after {
+        content: none;
     }
 }
