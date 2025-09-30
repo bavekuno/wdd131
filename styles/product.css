@@ -1,0 +1,159 @@
+/*-----------------------------------------------------------------------------
+  Global Styles & Variables
+-----------------------------------------------------------------------------*/
+:root {
+    --primary-color: #3b5998;
+    /* A deep blue for headings and accents */
+    --secondary-color: #8b9dc3;
+    /* A lighter blue for backgrounds */
+    --accent-color: #dfe3ee;
+    /* A light grey-blue for field backgrounds */
+    --text-color: #333;
+    /* Dark gray for text for good contrast */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/*-----------------------------------------------------------------------------
+  Form Layout and Design
+-----------------------------------------------------------------------------*/
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    /* Limits the form width for readability */
+    display: flex;
+    flex-direction: column;
+    /* Establishes a single-column layout */
+    gap: 1.5rem;
+    /* Creates consistent vertical spacing between field groups */
+}
+
+/* Grouping of form elements */
+form div,
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Provides consistent spacing within groups */
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Input, select, and textarea styling */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect total width */
+    font-size: 1rem;
+    background-color: var(--accent-color);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(59, 89, 152, 0.5);
+}
+
+/* Specific styling for the rating fieldset */
+.overall-rating legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0;
+}
+
+.rating-options {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.rating-options label {
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating-options input[type="radio"]:checked+label {
+    color: gold;
+}
+
+/* Hidden radio buttons, but still accessible for screen readers */
+.rating-options input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    align-self: flex-start;
+    /* Aligns the button to the left */
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #4c69ba;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    margin-top: auto;
+    /* Pushes the footer to the bottom */
+}
